@@ -11,6 +11,8 @@ import Title from 'grommet/components/Title';
 
 import Home from './containers/Home';
 
+import CopyrightBar from './components/CopyrightBar';
+
 class Main extends Component {
   render () {
     return (
@@ -23,13 +25,8 @@ class Main extends Component {
 
           <Home />
 
-          <Footer primary={true} appCentered={true} direction="column"
-            align="center" pad="small" colorIndex="grey-1">
-            <p>
-              Build your ideas with <Anchor href="http://grommet.io"
-              target="_blank">Grommet</Anchor>!
-            </p>
-          </Footer>
+          <CopyrightBar message={"Made with <3 at RIT"}/>
+
         </Box>
       </App>
     );

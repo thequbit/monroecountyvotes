@@ -10,6 +10,8 @@ import FormField from 'grommet/components/FormField';
 
 import Box from 'grommet/components/Box';
 
+import Section from 'grommet/components/Section';
+
 const VALUES = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight'];
 
 export default class Main extends Component {
@@ -17,9 +19,8 @@ export default class Main extends Component {
   constructor () {
     super();
     this._onDOMChange = this._onDOMChange.bind(this);
-this._onSelect = this._onSelect.bind(this);
-this.state = { value: VALUES[0], suggestions: VALUES };
-
+    this._onSelect = this._onSelect.bind(this);
+    this.state = { value: VALUES[0], suggestions: VALUES };
   }
 
   _onDOMChange (event) {
@@ -35,15 +36,20 @@ this.state = { value: VALUES[0], suggestions: VALUES };
   render () {
 
     return (
-      <Box>
-        <Form>
-          <FormField>
-            <SearchInput id="item1" name="item-1" value={this.state.value} onDOMChange={this._onDOMChange}
-              onSelect={this._onSelect}
+      <Section>
+
+        <Box>
+          <Form>
+            <FormField>
+              <SearchInput id="item1" name="item-1" value={this.state.value}
+                onDOMChange={this._onDOMChange}
+                onSelect={this._onSelect}
                 value={this.state.value} suggestions={this.state.suggestions} />
-          </FormField>
-        </Form>
-      </Box>
+            </FormField>
+          </Form>
+        </Box>
+
+      </Section>
     );
   }
 };
