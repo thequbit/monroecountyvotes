@@ -1,4 +1,4 @@
-import '../scss/index.scss';
+import './index.scss';
 
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
@@ -8,7 +8,8 @@ import Anchor from 'grommet/components/Anchor';
 import Header from 'grommet/components/Header';
 import Footer from 'grommet/components/Footer';
 import Title from 'grommet/components/Title';
-import TodoAppDashboard from './components/TodoAppDashboard';
+
+import Home from './containers/Home';
 
 class Main extends Component {
   render () {
@@ -19,7 +20,9 @@ class Main extends Component {
             pad={{horizontal: 'medium'}}>
             <Title>App</Title>
           </Header>
-          <TodoAppDashboard />
+
+          <Home />
+
           <Footer primary={true} appCentered={true} direction="column"
             align="center" pad="small" colorIndex="grey-1">
             <p>

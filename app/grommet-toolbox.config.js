@@ -4,13 +4,13 @@ export default {
   copyAssets: [
     'src/index.html',
     {
-      asset: 'src/img/**',
-      dist: 'dist/img/'
+      asset: 'src/assets/**',
+      dist: 'dist/assets/'
     }
   ],
   jsAssets: ['src/js/**/*.js'],
-  mainJs: 'src/js/index.js',
-  mainScss: 'src/scss/index.scss',
+  mainJs: 'src/index.js',
+  mainScss: 'src/index.scss',
   devServerPort: 9000,
   eslintOverride: path.resolve(__dirname, 'customEslintrc')
 };
