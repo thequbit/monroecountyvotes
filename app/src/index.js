@@ -9,7 +9,12 @@ import Header from 'grommet/components/Header';
 import Footer from 'grommet/components/Footer';
 import Title from 'grommet/components/Title';
 
+import Tabs from 'grommet/components/Tabs';
+import Tab from 'grommet/components/Tab';
+
 import Home from './containers/Home';
+
+import Sample from './containers/Sample';
 
 import CopyrightBar from './components/CopyrightBar';
 
@@ -23,7 +28,16 @@ class Main extends Component {
             <Title>App</Title>
           </Header>
 
-          <Home />
+          <Tabs>
+            <Tab title="Home">
+              <Home />
+            </Tab>
+
+            <Tab title="Sample">
+              <Sample />
+            </Tab>
+          </Tabs>
+
 
           <CopyrightBar message={"Made with <3 at RIT"}/>
 
