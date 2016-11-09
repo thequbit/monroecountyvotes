@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width">
   </head>
   <body>
-    <div id="app">{{message}}</div>
+    <div id="app"><vote-address-input v-bind:address="address" v-on:change="test"></vote-address-input></div>
 
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="src/app.js"></script>
